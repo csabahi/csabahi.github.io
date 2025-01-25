@@ -3,7 +3,7 @@ title: "Soccer-Playing Humanoid Robotics!"
 description: "Progress tracking of UW RoboSoccer"
 date: 2024-01-15
 tags: ["engineering", "robotics", "automation"]
-image: "/csabahi.github.io/projects/robotMechDesign.png"
+image: "/projects/robotMechDesign.png"
 github: "https://github.com/orgs/UW-RoboSoccer/repositories"
 demo: "https://uw-robosoccer.github.io/"
 ---
