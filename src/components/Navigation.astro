@@ -1,0 +1,61 @@
+---
+---
+<nav>
+  <div class="nav-content">
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <a href="/projects">Projects</a>
+      <a href="/library">Library</a>
+      <a href="/contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<style>
+  nav {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    z-index: 1000;
+    background: transparent;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .nav-links a {
+    color: rgb(var(--accent-dark));
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    background: rgba(var(--background), 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(var(--accent-light), 0.2);
+  }
+
+  .nav-links a:hover {
+    background: rgb(var(--accent));
+    color: white;
+  }
+
+  @media (max-width: 768px) {
+    nav {
+      top: 1rem;
+      right: 1rem;
+    }
+
+    .nav-links {
+      gap: 0.5rem;
+    }
+
+    .nav-links a {
+      padding: 0.4rem 0.8rem;
+      font-size: 0.9rem;
+    }
+  }
+</style>
