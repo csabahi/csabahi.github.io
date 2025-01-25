@@ -3,7 +3,7 @@ title: "Toyota Computer Vision Challenge"
 description: "Toyota Computer Vision Sticker Detection Challenge"
 date: 2023-05-14
 tags: ["engineering", "computer vision", "automation"]
-image: "/public/projects/toyotaCV.png"
+image: "/projects/toyotaCV.png"
 github: "https://github.com/csabahi/ToyotaCV"
 demo: "https://github.com/csabahi/ToyotaCV"
 ---
@@ -13,7 +13,7 @@ demo: "https://github.com/csabahi/ToyotaCV"
 ## Overview
 The aim of the project was to provide a reliable solution for utilizing automation to detect and inspect holes in engine bays that need to be covered by stickers. The stickers are polaced to reduce cabin-noise allowing for a smoother diving experience and prevent damage to the internal systems in the engine bay. The objective is to develop a program capable of analyzinfg a live feed/photos of an engine bay during the sticker application process, automatically identifying any holes that are not covered and relaying that information to the already automated process.
 
-![Project Result](/public/projects/toyota2.png)
+![Project Result](/projects/toyota2.png)
 
 ## Technical Details
 - Preprocessing: Apply image preprocessing techniques to enhance the image quality and remove any noise or artifacts that may interfere with subsequent analysis steps. This involved operations such as noise reduction, image enhancement, and calibration.
