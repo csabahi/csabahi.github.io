@@ -10,4 +10,4 @@ featured: true
 link: "https://link.springer.com/book/10.1007/978-3-642-54536-8"
 ---
 
-A timeless guide for software developers that has shaped my approach to programming and problem-solving. The book emphasizes pragmatic thinking and provides practical tips for writing better code and becoming a more effective developer.
+This book is for researchers, engineers, and students who are willing to understand how humanoid robots move and be controlled. I found this to be an excellent piece of literature to get my feet wet in the realm of humanoid robotics and learning about the fundamental math and controls algorithms for the more foundational movements and tasks.
