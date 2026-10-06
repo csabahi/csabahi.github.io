@@ -3,7 +3,7 @@ title: "BarBot: Autonomous Drink Carrier"
 description: "1st Year Design Project"
 date: 2022-11-20
 tags: ["engineering", "robotics", "automation"]
-image: "/projects/barbot.png"
+image: "/projects/barbot.jpg"
 github: "https://github.com/csabahi/BarBot"
 demo: "https://www.youtube.com/watch?v=TPw-_4b_qSk"
 ---

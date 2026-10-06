@@ -26,6 +26,9 @@ const { events } = Astro.props;
 
 <style>
   .timeline {
+    /* Horizontal center of the line and dots, measured from the timeline's left edge */
+    --line-x: 31px;
+    --item-indent: 70px;
     position: relative;
     max-width: 800px;
     margin: 2rem auto;
@@ -39,15 +42,15 @@ const { events } = Astro.props;
     background: rgb(var(--accent));
     top: 0;
     bottom: 0;
-    left: 31px;
-    margin-left: -2px;
+    left: var(--line-x);
+    transform: translateX(-50%);
   }
   
   .timeline-item {
     padding: 10px 30px;
     position: relative;
     width: 100%;
-    padding-left: 70px;
+    padding-left: var(--item-indent);
     padding-right: 25px;
   }
   
@@ -68,8 +71,9 @@ const { events } = Astro.props;
     background: rgb(var(--accent));
     border-radius: 50%;
     top: 50%;
-    transform: translateY(-50%);
-    left: -47px;
+    /* -1px offsets the card's border, since absolute positioning starts inside it */
+    left: calc(var(--line-x) - var(--item-indent) - 1px);
+    transform: translate(-50%, -50%);
     z-index: 1;
   }
   

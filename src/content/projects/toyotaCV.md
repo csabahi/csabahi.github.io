@@ -12,7 +12,7 @@ demo: "https://github.com/csabahi/ToyotaCV"
 The aim of the project was to provide a reliable solution for utilizing automation to detect and inspect holes in engine bays that need to be covered by stickers. The stickers are polaced to reduce cabin-noise allowing for a smoother diving experience and prevent damage to the internal systems in the engine bay. The objective is to develop a program capable of analyzinfg a live feed/photos of an engine bay during the sticker application process, automatically identifying any holes that are not covered and relaying that information to the already automated process.
 
 <div class="image-container">
-  <img src="/projects/toyota2.png" alt="Project Result" style="max-width: 400px; margin: 2rem auto; display: block;" />
+  <img src="/projects/toyota2.png" loading="lazy" alt="Project Result" style="max-width: min(400px, 100%); margin: 2rem auto; display: block;" />
 </div>
 
 ## Technical Details

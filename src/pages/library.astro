@@ -57,7 +57,7 @@ function getGroupLabel(group: string) {
         <div class="library-card" data-type={item.data.type}>
           <div class="card-header">
             {item.data.image && (
-              <img src={item.data.image} alt={item.data.title} class="item-image" />
+              <img src={item.data.image} alt={item.data.title} class="item-image" loading="lazy" decoding="async" />
             )}
             <div class="type-badge">
               {getTypeIcon(item.data.type)} {item.data.type}

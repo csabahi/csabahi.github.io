@@ -3,7 +3,7 @@ title: "Robotic Surgical Skull Cutting!"
 description: "Term project during internship at The PCIGITI Lab at SickKids"
 date: 2025-07-31
 tags: ["surgical robotics", "controls", "pHRI"]
-image: "/projects/rabt.png"
+image: "/projects/rabt.jpg"
 github: "https://youtu.be/8pv8ENcGmts" #can put a link to the paper once submitted
 demo: "https://youtu.be/8pv8ENcGmts"
 ---

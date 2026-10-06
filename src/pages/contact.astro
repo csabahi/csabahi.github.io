@@ -41,14 +41,6 @@ import Layout from '../layouts/Layout.astro';
 					</a>
 				</div>
 			</div>
-
-			<div class="contact-card">
-				<h2>Resume</h2>
-				<p>Download my resume to learn more about my experience and skills!</p>
-				<a href="/contact/Camron Sabahi Resume.pdf" type="application/pdf" target="_blank" rel="noopener noreferrer" class="download-button">
-					See My Resume!
-				</a>
-			</div>
 		</div>
 	</main>
 </Layout>
@@ -91,6 +83,12 @@ import Layout from '../layouts/Layout.astro';
 		justify-content: space-between;
 		gap: 1rem;
 	}
+	/* Centre a lone card on the last row, keeping it the same width as one column */
+	.contact-card:last-child:nth-child(odd) {
+		grid-column: 1 / -1;
+		justify-self: center;
+		width: calc((100% - 1.5rem) / 2);
+	}
 	.contact-card h2 {
 		color: rgb(var(--accent-dark));
 		margin: 0;
@@ -105,7 +103,7 @@ import Layout from '../layouts/Layout.astro';
 		flex-direction: column;
 		gap: 0.75rem;
 	}
-	.social-button, .download-button, .email-button {
+	.social-button, .email-button {
 		background: rgb(var(--accent));
 		color: white;
 		padding: 0.6rem 1rem;
@@ -115,13 +113,16 @@ import Layout from '../layouts/Layout.astro';
 		transition: background-color 0.2s;
 		display: inline-block;
 	}
-	.social-button:hover, .download-button:hover, .email-button:hover {
+	.social-button:hover, .email-button:hover {
 		background: rgb(var(--accent-dark));
 	}
 	@media (max-width: 768px) {
 		.contact-grid {
 			grid-template-columns: 1fr;
 			max-width: 350px;
+		}
+		.contact-card:last-child:nth-child(odd) {
+			width: 100%;
 		}
 		main {
 			font-size: 14px;

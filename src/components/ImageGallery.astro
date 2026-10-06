@@ -11,15 +11,16 @@ const { images } = Astro.props;
     {[0, 1, 2].map((frameIndex) => (
       <div class="gallery-frame">
         <div class="image-stack">
+          {/* Only the image each frame starts on gets a src; the rest are
+              fetched by the script shortly before they rotate into view */}
           {images.map((image, imageIndex) => (
-            <img 
-              src={image} 
+            <img
+              src={imageIndex === frameIndex ? image : undefined}
+              data-src={image}
               alt={`Gallery image ${imageIndex + 1}`}
               class="gallery-image"
               data-index={imageIndex}
-              loading="eager"
-              decoding="sync"
-              fetchpriority="high"
+              decoding="async"
             />
           ))}
         </div>
@@ -34,22 +35,24 @@ const { images } = Astro.props;
   const totalImages = Math.floor(images.length / 3);
   let currentIndex = 0;
 
-  // Preload images
-  images.forEach((img) => {
-    if (img instanceof HTMLImageElement) {
-      const imageLoader = new Image();
-      imageLoader.src = img.src;
+  function ensureLoaded(img: Element | undefined) {
+    if (img instanceof HTMLImageElement && !img.getAttribute('src') && img.dataset.src) {
+      img.src = img.dataset.src;
     }
-  });
+  }
 
   function updateImages() {
     frames.forEach((frame, frameIndex) => {
       const images = frame.querySelectorAll('.gallery-image');
       const imageIndex = (currentIndex + frameIndex) % totalImages;
-      
+
       images.forEach((img, idx) => {
         (img as HTMLElement).style.opacity = idx === imageIndex ? '1' : '0';
       });
+
+      // Fetch the next image for this frame ahead of its turn
+      ensureLoaded(images[imageIndex]);
+      ensureLoaded(images[(imageIndex + 1) % totalImages]);
     });
   }
 

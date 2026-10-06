@@ -57,6 +57,8 @@ const timelineEvents = [
 ];
 
 const internships = [
+  'Humanoids Deployment SWE @ NVIDIA (Summer 2026)',
+  'Humanoids Robotics Research @ The Hospital for Sick Children (Winter 2025)',
   'Robotics Research Engineering @ The Hospital for Sick Children (Summer 2024)',
   'Robotics Engineering Intern @ BH Frontier Solutions (Fall 2024)',
   'Optical Systems Engineering Intern @ Musashi AI (Winter 2024)',
@@ -124,7 +126,7 @@ const internships = [
 					<a href={`/projects/${project.slug}`} class="project-card">
 						<div class="image-container">
 							{project.data.image && (
-								<img src={project.data.image} alt={project.data.title} />
+								<img src={project.data.image} alt={project.data.title} loading="lazy" decoding="async" />
 							)}
 						</div>
 						<div class="project-content">

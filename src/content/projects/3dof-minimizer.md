@@ -13,7 +13,7 @@ The aim of the project was to develop a three-degree-of-freedom planar serial ro
 The material, width, and thickness of the manipulator's links have already been predetermined, the job is to find the optimal link lengths that will make the base motor require the least amount of torque possible for the given positions.
 
 <div class="image-container">
-  <img src="/projects/3dof2.png" alt="Project Result" style="max-width: 600px; margin: 2rem auto; display: block;" />
+  <img src="/projects/3dof2.png" loading="lazy" alt="Project Result" style="max-width: min(600px, 100%); margin: 2rem auto; display: block;" />
 </div>
 
 
